@@ -3,13 +3,13 @@ pipeline {
     
       stages {
           stage ('Build') {
-              steps {
+            parallel steps {
                   git 'https://github.com/Girija04b1/integrationwithjenkins.git'
                   sh "echo hello"
                     }
           } 
           stage ('Build') {
-              steps {
+            parallel steps {
                   git 'https://github.com/Girija04b1/integrationwithjenkins.git'
                   sh "echo hello printing again"
                     }
