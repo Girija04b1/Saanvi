@@ -8,14 +8,6 @@ pipeline {
         )        
     }
     stages {
-           stage ('Build') {
-                 steps {
-                    parallel (
-                      "first task" : {sh "echo hello"} ,
-                      "second task" : {sh "echo parallel job test"}
-                    )
-                 }
-            } 
            parallel(firstmessage: {
             stage ('hellow task') 
                     sh "echo hellow Saanvi"
@@ -31,10 +23,18 @@ pipeline {
                   sh "echo parallel job test2"
                  }
            }
-       }
+           stage ('Build') {
+                 steps {
+                    parallel (
+                      "first task" : {sh "echo hello"} ,
+                      "second task" : {sh "echo parallel job test"}
+                    )
+                 }
+            }
+    } 
     post {
         always {
             emailext body: 'A Test EMail', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'Test'
         }
     }
- }
+ }  
