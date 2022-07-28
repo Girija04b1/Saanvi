@@ -16,7 +16,7 @@ pipeline {
                     )
                  }
             } 
-           parallel firstmessage: {
+           parallel(firstmessage: {
             stage ('hellow task') {
                 steps {
                     sh "echo hellow Saanvi"
@@ -34,7 +34,7 @@ pipeline {
                     sh "echo hellow Chitti"
                 }
             }   
-           }
+           })
            stage ('test') {
                  steps {
                   sh "echo parallel job test2"
