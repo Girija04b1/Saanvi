@@ -1,4 +1,3 @@
-
 pipeline {
     parameters {
         string(
@@ -11,8 +10,8 @@ pipeline {
            stage ('Build') {
                  steps {
                     parallel (
-                      "first task" {sh "echo hello"}
-                      "second task" {sh "echo parallel job test"}
+                      "first task" : {sh "echo hello"} ,
+                      "second task" : {sh "echo parallel job test"}
                     )
                  }
             } 
@@ -23,3 +22,4 @@ pipeline {
            }
        }
  }  
+
