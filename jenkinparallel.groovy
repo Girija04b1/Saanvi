@@ -18,22 +18,16 @@ pipeline {
             } 
            parallel(firstmessage: {
             stage ('hellow task') {
-                steps {
                     sh "echo hellow Saanvi"
                 }
-            } 
             } , secondmessage: {
             stage ('hellow message') {
-                steps {
                     sh "echo hellow Havish"
                 }
-            } 
             } , thirdmessage: {
             stage ('hellow print') {
-                steps {
                     sh "echo hellow Chitti"
                 }
-            }   
            })
            stage ('test') {
                  steps {
@@ -46,4 +40,4 @@ pipeline {
             emailext body: 'A Test EMail', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'Test'
         }
     }
- }
+ } 
