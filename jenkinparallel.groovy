@@ -1,6 +1,4 @@
 pipeline {
-    agent any 
-    
       stages {
            stage ('Build') {
              parallel (
@@ -15,7 +13,6 @@ pipeline {
                    sh "echo parallel job test2"
                      }
                 )
-               
             }
         }  
  }
