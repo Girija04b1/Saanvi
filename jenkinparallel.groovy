@@ -22,7 +22,7 @@ pipeline {
                     sh "echo hellow Saanvi"
                 }
             }
-            stage ('hellow message'){
+            stage ('hellow message') {
                 steps {
                     sh "echo hellow Havish"
                 }
