@@ -8,10 +8,12 @@ pipeline {
                  steps {
                   sh "echo parallel job test" 
                      }
-                 steps {
-                   sh "echo parallel job test2"
-                     }
                 )
-            }
-        }  
- }
+           }
+           stage ('test') {
+                 steps {
+                 sh "echo parallel job test2"
+                     }
+           }
+        }
+ }  
