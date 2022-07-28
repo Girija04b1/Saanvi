@@ -21,17 +21,15 @@ pipeline {
                stage ('hellow task')
                {
                     sh "echo hellow Saanvi"
-               }, secondmessage: {
+               } , 
                stage ('hellow message')
                {
                     sh "echo hellow Havish"
-               }, thirdmessage: {
+               } , 
                stage ('hellow print')
                {
                     sh "echo hellow Chitti"
                }
-                 }
-                 }
              }
             }
             stage ('test') {
