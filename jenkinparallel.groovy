@@ -43,7 +43,8 @@ pipeline {
             }
     post {
         always {
-            emailext body: 'A Test EMail', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'Test'
+            emailext body: 'body $BUILD_USER triggered $BUILD_NUMBER', recipientProviders: [buildUser()], subject: 'build $BUILD_NUMBER ran', to: 'girija.naravula@gmail.com'
+            //emailext body: 'A Test EMail', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'Test'
         }
     }
  } 
