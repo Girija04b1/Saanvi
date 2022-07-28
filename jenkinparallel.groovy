@@ -16,19 +16,19 @@ pipeline {
                     )
                  }
             } 
-           parallel firstmessage : {
+           parallel firstmessage: {
             stage ('hellow task') {
                 steps {
                     sh "echo hellow Saanvi"
                 }
             } 
-            } , secondmessage : {
+            } , secondmessage: {
             stage ('hellow message') {
                 steps {
                     sh "echo hellow Havish"
                 }
             } 
-            } , thirdmessage : {
+            } , thirdmessage: {
             stage ('hellow print') {
                 steps {
                     sh "echo hellow Chitti"
