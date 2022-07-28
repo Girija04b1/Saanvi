@@ -21,12 +21,12 @@ pipeline {
                 steps {
                     sh "echo hellow Saanvi"
                 }
-            }
-            stage ('hellow message') {
+            } ,
+            stage ('hellow message'){
                 steps {
                     sh "echo hellow Havish"
                 }
-            }    
+            } ,  
             stage ('hellow print') {
                 steps {
                     sh "echo hellow Chitti"
@@ -44,4 +44,4 @@ pipeline {
             emailext body: 'A Test EMail', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'Test'
         }
     }
- }
+ }   
