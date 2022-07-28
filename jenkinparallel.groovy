@@ -18,17 +18,20 @@ pipeline {
             }
             stage ('parallel') {
              parallel {
-               stage ('hellow task')
-               {
+               stage ('hellow task'){
+                   steps {
                     sh "echo hellow Saanvi"
+                   }
                }  
-               stage ('hellow message')
-               {
+               stage ('hellow message'){
+                   steps {
                     sh "echo hellow Havish"
-               } 
-               stage ('hellow print')
-               {
+                   } 
+               }
+               stage ('hellow print'){
+                   steps {
                     sh "echo hellow Chitti"
+                  }
                }
              }
             }
