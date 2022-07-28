@@ -1,4 +1,5 @@
 pipeline {
+    Agent any  
     parameters {
         string(
                defaultValue: 'scriptcrunch', 
